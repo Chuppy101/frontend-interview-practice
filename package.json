@@ -1,0 +1,30 @@
+{
+	"name": "frontend-interview-practice",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"dev": "ts-node",
+		"build": "tsc",
+		"lint": "eslint . --ext .ts",
+		"format": "prettier --write .",
+		"test": "jest"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Chuppy101/frontend-interview-practice.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"type": "commonjs",
+	"bugs": {
+		"url": "https://github.com/Chuppy101/frontend-interview-practice/issues"
+	},
+	"homepage": "https://github.com/Chuppy101/frontend-interview-practice#readme",
+	"devDependencies": {
+		"ts-node": "^10.9.2",
+		"typescript": "^5.8.3"
+	}
+}
