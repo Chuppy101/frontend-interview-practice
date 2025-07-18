@@ -1,7 +1,8 @@
+// Находит длину самой длинной подстроки с не более чем k уникальными символами
 export function lengthDistinctSubstring(s: string, k: number): number {
   if (k <= 0) return 0;
 
-  const counter = new Map<string, number>();
+  const counter = new Map<string, number>(); // счетчик символов в окне
   let left = 0;
   let maxLen = 0;
 
@@ -9,6 +10,7 @@ export function lengthDistinctSubstring(s: string, k: number): number {
     const char = s[right];
     counter.set(char, (counter.get(char) ?? 0) + 1);
 
+    // Если уникальных символов больше k — сдвигаем левую границу
     while (counter.size > k) {
       const leftChar = s[left];
       const newCount = (counter.get(leftChar) ?? 0) - 1;
@@ -18,6 +20,7 @@ export function lengthDistinctSubstring(s: string, k: number): number {
 
       left++;
     }
+
     maxLen = Math.max(maxLen, right - left + 1);
   }
 
