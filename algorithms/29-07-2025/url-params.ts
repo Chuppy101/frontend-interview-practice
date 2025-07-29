@@ -4,7 +4,7 @@ export function parseQueryParams(url: string): Record<string, string> {
   const queryStart = url.indexOf('?');
   if (queryStart === -1) return result;
 
-  const queryString = url.slice(queryStart + 1);
+  const queryString = url.slice(queryStart + 1).split('#')[0];
   const pairs = queryString.split('&');
 
   for (const pair of pairs) {
