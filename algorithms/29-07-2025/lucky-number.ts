@@ -8,12 +8,12 @@ export function isLucky(num: number): boolean {
   }
 
   const seen = new Set<number>();
-  let squaredValue = sumOfSquares(num);
+  let current = num;
 
-  while (!seen.has(squaredValue)) {
-    if (squaredValue === 1) return true;
-    seen.add(squaredValue);
-    squaredValue = sumOfSquares(squaredValue);
+  while (!seen.has(current)) {
+    if (current === 1) return true;
+    seen.add(current);
+    current = sumOfSquares(current);
   }
   return false;
 }
